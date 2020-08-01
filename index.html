@@ -17,30 +17,30 @@
   }
      </style>
 </head>
-  <script>
-  var t=document.getElementById("cb");
-  var i,j;
-  var sp=document.createElement('sp');
-  sp.className="sp";
-  for(i=0;i<8;i++)
-  {
-    var tm=document.createElement('tm');
-    for(j=0;j<8;j++)
-    {
-      var tp=document.createElement('tp');
-      if((i+j)%2)
-    tp.className="white";
-    else tp.className="black";
-    tm.appendChild(tp);
-      }
-
-t[0].appendChild(tm);
-    }
-
-  </script>
   <body>
 <h1>Hello World</h1>
 <p >I'm hosted with GitHub Pages.chutiya</p>
 <div id="cb">this is the chessboard</div>
+<script>
+var t=document.getElementById("cb");
+var i,j;
+var sp=document.createElement('sp');
+sp.className="sp";
+for(i=0;i<8;i++)
+{
+  var tm=document.createElement('tm');
+  for(j=0;j<8;j++)
+  {
+    var tp=document.createElement('tp');
+    if((i+j)%2)
+  tp.className="white";
+  else tp.className="black";
+  tm.appendChild(tp);
+    }
+
+t.appendChild(tm);
+  }
+
+</script>
 </body>
 </html>
