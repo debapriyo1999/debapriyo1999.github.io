@@ -2,17 +2,48 @@
 <html>
 <head>
   <title>this is title</title>
+  <style>
+  #black
+  {
+    width:20px;
+    height:20px;
+    color="black";
+  }
+  #white
+  {
+    width:20px;
+    height:20px;
+    color="white";
+  }
+  #sp {
+    content:"\a";
+  }
+  </style>
 </head>
 <body>
   <script>
-  function myFunc()
+  var t=document.getElementById("chessboard");
+  var i,j;
+  var sp=document.createElement('sp');
+  sp.className="sp";
+  for(i=0;i<8;i++)
   {
-    document.getElementById('demo').innerHTML="donket";
-  }
+    var tm=document.createElement('tm');
+    for(j=0;j<8;j++)
+    {
+      var tp=document.createElement('tp');
+      if((i+j)%2)
+    tp.className="white";
+    else tp.className="black";
+    tm.appendChild(tp);
+      }
+tm.appendChild(sp);
+t.appendChild(tm);
+    }
+
   </script>
 <h1>Hello World</h1>
 <p >I'm hosted with GitHub Pages.</p>
-<button onclick="myFunc()" id='demo'>this is it\n</button>
-<a href="https://www.w3schools.com">Visit W3Schools</a>
+<div id="chessboard"></div>
 </body>
 </html>
